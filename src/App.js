@@ -27,7 +27,7 @@ const Example = () => {
 			<input type="text" value={fruit} onChange={(e) => setFruit(e.target.value)} />
 
 			<p>List of Todos</p>
-			<ul>{todos.map((t) => <li>{t.text}</li>)}</ul>
+			<ul>{todos.map((t, i) => <li key={`${t}-${i}`}>{t.text}</li>)}</ul>
 			<input
 				type="text"
 				value={todo}
